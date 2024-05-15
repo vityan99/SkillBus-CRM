@@ -1,0 +1,350 @@
+@import "_variables";
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+
+  &__content {
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 450px;
+    background-color: $white-color;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__client-id {
+    margin-left: 9px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $grey-color;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__label-text {
+    position: absolute;
+    bottom: 2px;
+    color: $grey-color;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  &__label-symbol {
+    color: $purple-color;
+  }
+
+  &__input {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $grey-color;
+  }
+
+  &__error-wrapper {
+    text-align: center;
+  }
+
+  &__contacts {
+    margin: 25px 0;
+    padding: 8px 0;
+    background-color: rgb(200, 197, 209, 0.3);
+
+    &-item {
+      display: flex;
+      margin-bottom: 15px;
+      height: 37px;
+    }
+
+    &-input {
+      margin-left: -1px;
+      padding: 0 12px;
+      width: 61%;
+      border: 1px solid $light-grey-color;
+      background-color: inherit;
+      font-weight: 600;
+      outline: none;
+      z-index: 10;
+
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
+
+    &-btn-delete {
+      margin-left: -1px;
+      width: 27px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $light-grey-color;
+      background-color: #e7e5eb;
+      transition: 0.2s ease-in-out;
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        z-index: 40;
+        border-color: $red-color;
+      }
+
+      &:focus-visible .delete-contact-icon,
+      &:hover .delete-contact-icon,
+      &:active .delete-contact-icon {
+        fill: $red-color;
+      }
+    }
+  }
+
+  &__btn-add {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    transition: 0.2s ease-in-out;
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      outline: none;
+      color: $purple-color;
+    }
+
+    &:focus-visible .modal__icon-add,
+    &:hover .modal__icon-add,
+    &:active .modal__icon-add {
+      fill: $white-color;
+      background-color: $purple-color;
+      border-radius: 100px;
+    }
+  }
+
+  &__icon-add {
+    fill: $purple-color;
+    margin-right: 4px;
+    transition: 0.2s ease-in-out;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn-secondary {
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: underline;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 25px;
+    max-width: 275px;
+    text-align: center;
+  }
+}
+
+.delete-title {
+  margin-bottom: 11px;
+}
+
+.btn-primary {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 12.5px 35px;
+  height: 42px;
+  background-color: $purple-color;
+  color: $white-color;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-primary:disabled {
+  background-color: $disabled-color;
+  color: $white-color;
+}
+
+.btn-primary:focus-visible,
+.btn-primary:not([disabled]):hover {
+  outline: none;
+  background-color: $light-purple-color;
+  color: $white-color;
+}
+
+.btn-primary:active {
+  background-color: $dark-purple-color;
+  color: $white-color;
+}
+
+.modal__error-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  margin-top: -20px;
+  max-width: 255px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  color: $red-color;
+}
+
+.delete-contact-icon {
+  fill: $grey-color;
+
+  transition: 0.2s ease-in-out;
+}
+
+.transform-label {
+  transform: scale(0.7) translate(-21%, -20px);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.invalide {
+  border-color: $red-color;
+}
+
+.delete {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+  }
+}
+
+.choices {
+  margin: 0;
+  width: 123px;
+
+  &__inner {
+    padding: 0;
+    min-height: auto;
+    height: 100%;
+    vertical-align: middle;
+    border: 1px solid $light-grey-color;
+    border-radius: 0;
+    background-color: #e7e5eb;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.is-open .choices__inner {
+  border-radius: 0;
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+  padding: 0;
+  padding-left: 12px;
+}
+
+.choices__list--single {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding: 5px 0;
+  padding-left: 12px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  margin-top: 0;
+  border-radius: 0;
+}
+
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  padding: 5px 0;
+  background-color: #f4f3f6;
+  border: 1px solid #c8c5d1;
+  border-top: none;
+}
+
+.choices[data-type*="select-one"]::after {
+  margin-top: -5px;
+  border: none;
+  background-image: url("../images/choice-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  margin-top: -5px;
+  transform: rotate(0.5turn);
+}
+
+.btn-loader {
+  margin-right: 2px;
+}
+
+.btn-spinner {
+  stroke: #b89eff;
+}
+
+@media (max-width: 768px) {
+  .modal__content {
+    width: 300px;
+  }
+
+  .modal__container {
+    padding: 0 15px;
+  }
+}

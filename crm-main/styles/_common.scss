@@ -1,0 +1,76 @@
+@import "_variables";
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"), url("../fonts/OpenSansRegular.woff2"), url("../fonts/OpenSansRegular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"), url("../fonts/OpenSansBold.woff2"), url("../fonts/OpenSansBold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: $page-color;
+}
+
+.container {
+  max-width: 1216px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}

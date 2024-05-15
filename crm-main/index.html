@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/choices.min.css" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script defer src="/assets/inputmask.min.js"></script>
+    <script defer src="/assets/popper.min.js"></script>
+    <script defer src="/assets/tippy-bundle.umd.min.js"></script>
+    <script defer src="/assets/choices.min.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <title>SkillBus - CRM-система</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__logo">
+        <img src="/images/logo.svg" alt="Логотип skillbus" />
+      </a>
+      <input type="text" id="search" class="header__input" placeholder="Введите запрос" aria-label="Поле введите запрос" />
+    </header>
+
+    <main class="main">
+      <div class="clients">
+        <div class="clients__container container" id="page-container">
+          <h1 class="clients__title">Клиенты</h1>
+
+          <table class="table">
+            <thead class="table__head table-head">
+              <tr class="table-head__row">
+                <th class="table-head__cell js-sort-btn">
+                  ID
+                  <svg class="table-head__arrow" width="8" height="8">
+                    <use xlink:href="/images/sprites.svg#arrow"></use>
+                  </svg>
+                </th>
+                <th class="table-head__cell js-sort-btn fullname">
+                  Фамилия Имя Отчество
+                  <svg class="table-head__arrow" width="8" height="8">
+                    <use xlink:href="/images/sprites.svg#arrow"></use>
+                  </svg>
+                  А-Я
+                </th>
+                <th class="table-head__cell js-sort-btn">
+                  Дата и время создания
+                  <svg class="table-head__arrow" width="8" height="8">
+                    <use xlink:href="/images/sprites.svg#arrow"></use>
+                  </svg>
+                </th>
+                <th class="table-head__cell js-sort-btn">
+                  Последние изменения
+                  <svg class="table-head__arrow" width="8" height="8">
+                    <use xlink:href="/images/sprites.svg#arrow"></use>
+                  </svg>
+                </th>
+                <th class="table-head__cell">Контакты</th>
+                <th class="table-head__cell">Действия</th>
+              </tr>
+            </thead>
+            <tbody id="tbody" class="table__body"></tbody>
+          </table>
+          <div class="preloader" id="preloader">
+            <svg class="spinner" width="100" height="100">
+              <use xlink:href="/images/sprites.svg#spinner"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="modal" class="modal"></div>
+  </body>
+</html>
