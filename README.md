@@ -24,7 +24,7 @@
 - [HTML5](https://html.com/html5/)
 - [Адаптивная верстка](https://habr.com/ru/companies/htmlacademy/articles/342066/)
 - [CSS3](https://www.w3schools.com/W3CSS/)
-- [Sass](https://sass-scss.ru/guide/)
+- [SCSS](https://sass-scss.ru/guide/)
 - [SVG-спрайты](https://doka.guide/html/svg-sprite/#:~:text=SVG-спрайт%20—%20это%20файл%2C%20получаемый,использовании%20векторной%20графики%20в%20разметке)
 - [normalize.css](https://necolas.github.io/normalize.css/)
 - [JavaScript](https://javascript.ru/)
