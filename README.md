@@ -10,6 +10,10 @@
 - Сортировка по полям
 - Поиск
 
+![skb preview-1](https://github.com/vityan99/SkillBus-CRM/blob/main/skb-preview-1.png)
+![skb preview-2](https://github.com/vityan99/SkillBus-CRM/blob/main/skb-preview-2.png)
+![skb preview-3](https://github.com/vityan99/SkillBus-CRM/blob/main/skb-preview-3.png)
+
 ## Содержание
 
 - [Технологии](#технологии)
